@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 17</title>
+</head>
+<body>
+    <script>
+
+        //var a = String(false); //string
+
+        //var a = String(Date()); // string
+
+        //var a = 15;
+        //a = a.toString(); // string
+
+        //var a = Number("100"); // number
+
+        //var a = Number(false); // number
+
+        //document.write(typeof a);
+
+
+        var a = ["Elma", "Üzüm", "Portakal"];
+        //var b = "Javascript";
+        //var c = false;
+        //document.write(a.constructor);
+        //document.write(b.constructor);
+        //document.write(c.constructor);
+
+        function kontrol(x) {
+            return x.constructor.toString().indexOf("Array") > -1;
+        }
+
+        var b = kontrol(a);
+        document.write(b);
+
+    </script>
+</body>
+</html>

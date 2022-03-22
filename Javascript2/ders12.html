@@ -5,8 +5,50 @@
     <title>JS Eğitim Seti || Ders 12</title>
 </head>
 <body>
-    <script>
 
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        var a = ["Üzüm", "Elma", "Erik", "Şeftali", "Kayısı"];
+        var b = [100, 15, 45, 6, 89, 42];
+        var c = [{ marka: "Mercedes", yil: 2010 },
+        { marka: "Honda", yil: 2005 },
+        { marka: "Renault", yil: 2015 }];
+
+        //document.getElementById("div1").innerHTML = b +"<br><br>";
+
+        //a.sort(); // alfabetik sıralama yapar.
+        //a.reverse(); // simetrik olarak tersten sıralama yapar.
+        //b.sort(function (x, y) {
+        //    return x - y;
+        //}); //sayıları küçükten büyüğe sıralar.
+        //b.sort(function (x, y) {
+        //    return y-x;
+        //}); // sayıları büyükten küçüğe sıralar.
+
+        //var c = b[0];
+        //var c = b[b.length-1];
+
+        //document.getElementById("div2").innerHTML = b + "<br><br>";
+
+        //document.write(c);
+
+        function arabalariGoster() {
+            document.getElementById("div1").innerHTML =
+                c[0].marka + " " + c[0].yil + "<br>" +
+                c[1].marka + " " + c[1].yil + "<br>" +
+                c[2].marka + " " + c[2].yil + "<br>";
+        }
+
+        function sirala() {
+            c.sort(function (a, b) {
+                return a.yil - b.yil
+            });
+            arabalariGoster();
+        }
+
+        arabalariGoster();
+        sirala();
     </script>
 </body>
 </html>
