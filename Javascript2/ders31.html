@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 31</title>
+    <style>
+        #div1{
+            width:100%;
+            height:100px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <!--<button onclick="tiklamaIslemi()" id="buton1">Tıkla</button>-->
+    <button ondblclick="tiklamaIslemi()" id="buton1">Tıkla</button>
+    <!--<input type="text" id="Text1" value="Javascript" onchange="alert('Metin değişti')" onfocus="tiklamaIslemi2()" onblur="tiklamaIslemi3()" />-->
+    <!--<input type="text" id="Text1" onkeypress="tusIslemi()" onkeyup="alert('Metin kutusuna yazıldı.')" onkeydown="alert('Metin kutusuna yazıldı.')"/>-->
+    <input type="text" id="Text1" onmousemove="fareHareketi()" onmouseover="fareHareketi()" onmouseout="fareHareketi2()"/>
+    <script>
+
+        function tiklamaIslemi(){
+            //alert("Butona tıklandı.");
+            document.getElementById("div1").innerHTML = "Butona tıklandı.";
+        }
+
+        function tiklamaIslemi2() {
+            document.getElementById("div1").innerHTML = "Metin kutusuna tıklandı.";
+        }
+
+        function tiklamaIslemi3() {
+            document.getElementById("div1").innerHTML = "Metin kutusundan çıkıldı.";
+        }
+
+        function tusIslemi() {
+            document.getElementById("div1").innerHTML = "Metin kutusuna bir şey yazıldı.";
+        }
+
+        function fareHareketi() {
+            document.getElementById("Text1").style.width = "150px";
+            document.getElementById("Text1").style.height = "150px";
+            document.getElementById("Text1").style.backgroundColor = "red";
+        }
+        function fareHareketi2() {
+            document.getElementById("Text1").style.width = "70px";
+            document.getElementById("Text1").style.height = "60px";
+            document.getElementById("Text1").style.backgroundColor = "yellow";
+        }
+
+
+    </script>
+</body>
+</html>

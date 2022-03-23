@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 24</title>
+</head>
+<body>
+    <divi id="div1"></divi>
+
+    <script>
+
+        var yazi = "";
+
+        var meyveler = ["Elma", "Üzüm", "Kiraz", "Armut", "Şeftali"];
+
+        var i = 0;
+
+        do {
+            //yazi += "Javascript öğreniyorum.. <br>";
+            yazi += i + "<br>";
+            i++;
+        } while (i < 10);
+
+        document.getElementById("div1").innerHTML = yazi;
+
+    </script>
+</body>
+</html>

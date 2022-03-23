@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 32</title>
+    <style>
+        #div1{
+            width:100%;
+            height:100px;
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="btn">Tıkla</button>
+    <script>
+        //document.getElementById("btn").addEventListener("click", function () {
+        //    //document.getElementById("div1").innerHTML = "Javascript öğreniyorum..";
+        //    document.getElementById("div1").style.backgroundColor = "green";
+        //});
+
+        var a = document.getElementById("btn");
+        var isim = prompt("İsminiz : ", "null");
+        a.addEventListener("click", selamlama);
+        a.addEventListener("click", arkaPlan);
+        a.removeEventListener("click", selamlama);
+        function selamlama() {
+            document.getElementById("div1").innerHTML = "Hoşgeldiniz, " + isim;
+        }
+        function arkaPlan() {
+            document.getElementById("div1").style.backgroundColor = "green";
+        }
+    </script>
+</body>
+</html>

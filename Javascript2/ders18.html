@@ -8,9 +8,18 @@
     <script>
 
 
-        var a = 100;
-        var b = "10";
-        var c = (a == b);
+        var a = 10;
+        var b = 100;
+        //var c = (a == b); // içerik sorgulama
+        //var c = (a === b); // hem içerik hem değişken türü sorgulama
+        //var c(a != b)  // eşit değil mi?
+        //var c(a !== b) // hem içeriği hem de değişken türünü kontrol eder
+        var x = 15;
+        var y = 20;
+
+        //var c = (a < b) && (x < y); // en az bir tane false olursa false, ikisi de true olursa true döner
+        //var c = (a > b) || (x > y); // en az bir tane true olursa true, ikisi de false olursa false döner
+        //var c = (a > b) || !(x > y); // x, y'den büyük değil mi?
 
 
             document.write(c);
