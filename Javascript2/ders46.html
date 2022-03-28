@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>JS Eğitim Seti || Ders 46 || Uygulama 6</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            margin: 0;
+            background-color: aquamarine;
+        }
+        
+        #container {
+            width: 30%;
+            height: 200px;
+            background-color: lightgray;
+            position: absolute;
+            border-radius: 10px;
+            left: 35%;
+            top: 25%;
+        }
+        
+        #kullaniciAdi {
+            width: 150px;
+            height: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        
+        #parola {
+            width: 150px;
+            height: 30px;
+            margin-left: 66px;
+            margin-top: 20px;
+        }
+        
+        #btn {
+            width: 275px;
+            height: 30px;
+            margin-left: 120px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body id="arka">
+    <div id="container">
+        <label style="margin-left:120px;" for="kullaniciAdi">Kullanıcı Adı : </label>
+        <input type="text" id="kullaniciAdi"><br>
+        <label style="margin-left:120px;" for="parola">Parola : </label>
+        <input type="password" id="parola"><br><br>
+        <button id="btn" onclick="girisOnayi()">Giriş Yap</button>
+    </div>
+
+    <img src="goruntu1.jpg" id="img" width="1920" height="933" />
+
+    <script>
+        var text;
+
+        function resimSec() {
+            var a = ["goruntu1.jpg", "goruntu2.jpeg", "goruntu3.jpeg", "goruntu4.jpeg", "goruntu5.jpeg", "goruntu6.jpeg"];
+            text = "";
+
+
+            var random = Math.round(Math.random() * 5);
+            text = a[random];
+
+
+        }
+
+        setInterval(function() {
+            resimSec();
+            document.getElementById("img").src = text;
+        }, 2000);
+
+        var kullanicilar = [{
+            kullaniciAdi: "admin",
+            parola: "admin"
+        }, {
+            kullaniciAdi: "javascript",
+            parola: "1234"
+        }, {
+            kullaniciAdi: "yazilim",
+            parola: "4321"
+        }];
+
+        var girilenKullaniciAdi;
+        var girilenParola;
+        var x;
+
+        function kontrolEt() {
+            girilenKullaniciAdi = document.getElementById("kullaniciAdi").value;
+            girilenParola = document.getElementById("parola").value;
+
+            for (x of kullanicilar) {
+                if ((x.kullaniciAdi == girilenKullaniciAdi) && (x.parola == girilenParola)) {
+                    return true;
+                }
+            }
+        }
+
+        function girisOnayi() {
+            kontrolEt();
+            if (kontrolEt()) {
+                window.open("ders45.html", "_self");
+            } else {
+                alert("Hatalı kullanıcı adı ya da parola. Yeniden deneyiniz...");
+                document.getElementById("kullaniciAdi").value = "";
+                document.getElementById("parola").value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
