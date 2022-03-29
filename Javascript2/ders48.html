@@ -20,6 +20,41 @@
         box.style.position = "absolute";
         box.style.top = "1px";
         box.style.left = "1px";
+        box.style.backgroundImage = "url(goruntu1.jpg)";
+
+        var yukariDon = false;
+        var solaDon = false; //1 px
+        function animasyon(box, top, left) {
+
+            var ustKonum = Number(box.style.top.split("px")[0]);
+            var solKonum = Number(box.style.left.split("px")[0]);
+
+            if (ustKonum >= (window.innerHeight - Number(box.style.height.split("px")[0]))) {
+                yukariDon = true;
+            } else if (ustKonum <= 0) {
+                yukariDon = false;
+            }
+            box.style.top = (ustKonum + top).toString() + "px";
+
+            if (solKonum >= (window.innerWidth - Number(box.style.width.split("px")[0]))) {
+                solaDon = true;
+            } else if (solKonum <= 0) {
+                solaDon = false;
+            }
+            box.style.left = (solKonum + left).toString() + "px";
+        }
+
+        setInterval(function() {
+            if (yukariDon == true && solaDon == true) {
+                animasyon(box, -1, -1);
+            } else if (yukariDon == false && solaDon == true) {
+                animasyon(box, 1, -1);
+            } else if (yukariDon == true && solaDon == false) {
+                animasyon(box, -1, 1);
+            } else if (yukariDon == false && solaDon == false) {
+                animasyon(box, 1, 1);
+            }
+        }, 2);
     </script>
 </body>
 

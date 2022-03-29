@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eğitim Seti || Ders 53 || JQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        
+        tr {
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <p id="p1" class="c1">Deneme Paragraf 1 ID : p1 Class : c1</p>
+        <p id="p2" class="c1">Paragraf 2 ID : p2 Class : c1</p>
+        <p id="p3" class="c3">Paragraf 3 ID : p3 Class : c3</p>
+        <p id="p4" class="c4">Paragraf 4 ID : p4 Class : c4</p>
+    </div>
+
+    <table cellspacing="0">
+
+        <thead>
+            <tr>
+                <th>Ad/Soyad</th>
+                <th>Yaş</th>
+                <th>Meslek</th>
+            </tr>
+            <tr>
+                <td>Doruk Akgül</td>
+                <td>24</td>
+                <td>Endüstri Mühendisi</td>
+            </tr>
+            <tr>
+                <td>Kılıç Kalender</td>
+                <td>26</td>
+                <td>Kaptan</td>
+            </tr>
+            <tr>
+                <td>İrem Şişman</td>
+                <td>22</td>
+                <td>Çevirmen</td>
+            </tr>
+            <tr>
+                <td>Barış Akgül</td>
+                <td>25</td>
+                <td>Mühendis</td>
+            </tr>
+        </thead>
+
+    </table>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>JQuery</li>
+    </ul>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>JQuery</li>
+    </ul>
+    <a href="ders52.html" target="_blank">Ders 52</a>
+    <br><br> Checkbox <input id="Checkbox1" type="checkbox" checked>
+    <button id="btn">Tıkla</button>
+    <script>
+        $(function() {
+            $("#btn").click(function() { // document.getElementById("btn");
+                // $("p1").css("color", "red"); //element selector
+                // $("#p1").css("color", "red"); //id selector 
+                // $(".c1").css("color", "red"); //class selector
+                //$(this).css("color", "red");
+                //$("*").css("color", "red");
+                //$("#p2.c1").css("color", "red");
+                //$("p:first").css("color", "red"); // ilkini seçer
+                //$("p:last").css("color", "red"); // sonuncuyu seçer
+                //$("ul li:first-child").css("color", "red"); // bütün ul'lerin bütün ilk li'leri seçer
+                //$("[href]").css("color", "red"); //href'e sahip bütün elemanları seçer
+                //$("[id]").css("color", "red"); //id'ye sahip tüm elemanları seçer
+                //$("a[target = '_blank']").css("color", "red"); //target'ı blank olanları seçer
+                //$(":button").css("color", "red"); //varolan bütün button elemanları seçer
+                //$(":checked").css("width", "100px"); // tüm checkbox'ların width'ini arttırır.
+                //$("p:contains(ID)").css("color", "red"); //ID yazısı içeren p elemanlarını seçer
+                //$("p:not(#p1)").css("color", "red"); // id'si #p1 olmayan hepsini seçer
+                //$("p:not(':contains(Deneme)')").css("color", "red"); // deneme yazısını içermeyen p'ler
+                //$("div:has(p)").css("color", "red"); //içerisinde p bulunan divler
+                //$(".c1, #p4, ul").css("color", "red"); //toplu seçim
+                //$("tr:even").css("color", "red"); //çift satırları seçer
+                $("tr:odd").css("color", "red"); // tek satırları seçer
+            });
+        })
+    </script>
+</body>
+
+</html>
