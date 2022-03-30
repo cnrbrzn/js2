@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eğitim Seti || Ders 57 || JQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <p id="p1">HTML</p>
+    <p id="p2"><b>CSS</b></p>
+    <p id="p3">Javascript</p>
+    <input id="t1" type="text" value="JQuery">
+    <br><br>
+    <a id="a1" href="ders56.html" target="_blank">Ders 56</a>
+    <br><br>
+    <button id="btn">Tıkla</button>
+    <script>
+        $(function() {
+            // $("#btn").click(function() {
+            //     var a = $("#p2").html();
+            //     alert(a);
+            // });
+            // $("#btn").click(function() {
+            //     var a = $("#p2").text();
+            //     alert(a);
+            // });
+
+            //inputların içindeki değeri almak için kullanılır
+            // $("#btn").click(function() {
+            //     var a = $("#t1").val();
+            //     alert(a);
+            // });
+
+
+            // $("#btn").click(function() {
+            //     var a = $("#a1").attr("href");
+            //     alert(a);
+            // });
+
+
+            // $("#p1").text("Jquery öğreniyorum");
+            // $("#p1").html("<b>Jquery öğreniyorum</b>");
+            // $("#t1").val("Jquery öğreniyorum");
+
+            //$("#a1").attr("href", "ders55.html");
+            $("#a1").attr({
+                "href": "ders55.html",
+                "target": "_self"
+            });
+        });
+    </script>
+</body>
+
+</html>

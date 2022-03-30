@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eğitim Seti || Ders 61 || JQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        #div1 {
+            border: 5px solid black;
+            padding: 10px;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="div1">
+
+    </div>
+    <div id="div2">
+
+    </div>
+
+    <br><br>
+    <button id="btn">Tıkla</button>
+
+    <script>
+        $(function() {
+            $("#btn").click(function() {
+                // var a = $("#div1").width();
+                // var b = $("#div1").height();
+
+                // var a = $("#div1").innerWidth();
+                // var b = $("#div1").innerHeight();
+
+                // var a = $("#div1").outerWidth();
+                // var b = $("#div1").outerHeight();
+
+                // var a = $("#div1").outerWidth(true);
+                // var b = $("#div1").outerHeight(true);
+
+                // $("#div2").html("Genişlik : " + a + "<br>Yükseklik : " + b);
+
+                $("#div1").width(600);
+                $("#div1").height(600);
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

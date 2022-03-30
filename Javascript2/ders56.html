@@ -19,6 +19,56 @@
 </head>
 
 <body>
+    <div id="div1">
+
+    </div>
+    <br><br>
+    <button id="btn">Tıkla</button>
+    <script>
+        var obje = {
+            isim: "Caner",
+            soyisim: "Borazan",
+            degistir: function() {
+                $("#div1").css("background-color", "green");
+            }
+        }
+
+
+        $(function() {
+            // $("#div1").on({
+            //     click: function() {
+            //         $("#div1").css("background-color", "green")
+            //     },
+            //     mouseenter: function() {
+            //         $("#div1").css("background-color", "red")
+            //     },
+            //     mouseleave: function() {
+            //         $("#div1").css("background-color", "black")
+            //     }
+
+            // });
+            // $("#btn").click(function() {
+            //     $("#div1").off("click");
+            // });
+
+            //sadece 1 kere çalıştırır
+            // $("#div1").one({
+            //     click: function() {
+            //         $("#div1").css("background-color", "green")
+            //     },
+            //     mouseenter: function() {
+            //         $("#div1").css("background-color", "red")
+            //     },
+            //     mouseleave: function() {
+            //         $("#div1").css("background-color", "black")
+            //     }
+
+            // });
+
+            //obje içerisindeki fonksiyona ulaşabilir 
+            $("#btn").click($.proxy(obje, "degistir"));
+        });
+    </script>
 
 </body>
 

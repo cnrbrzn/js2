@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Eğitim Seti || Ders 63 || JQuery</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        .deneme {
+            display: block;
+            border: 2px solid lightgrey;
+            color: gray;
+            padding: 5px;
+            margin: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1" class="deneme">
+        div (5.Ebeveyn) ID: #div1
+        <div class="deneme" id="div2">
+            div (4.Ebeveyn) ID : #div2
+            <ul class="deneme">
+                ul (3.Ebeveyn)
+                <li class="deneme">
+                    li (2.Ebeveyn)
+                    <p class="deneme">
+                        p (1.Ebeveyn)
+                        <span class="deneme">span</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="deneme" id="div3">
+            div ID: #div3
+            <div class="deneme" id="div4">
+                div ID: #div4
+            </div>
+        </div>
+        <h1 class="deneme">
+            h1
+        </h1>
+    </div>
+    <br>
+    <button id="btn">Tıkla</button>
+
+    <script>
+        $(function() {
+            $("#btn").click(function() {
+
+                // $("#div1").children().css({
+                //     "border": "2px solid red",
+                //     "color": "red"
+                // });
+
+
+                // $("#div1").children("h1").css({
+                //     "border": "2px solid red",
+                //     "color": "red"
+                // });
+
+                // $("#div1").children("#div3").css({
+                //     "border": "2px solid red",
+                //     "color": "red"
+                // });
+
+                //div1'in içinde arar
+                // $("#div1").find("#div4").css({
+                //     "border": "2px solid red",
+                //     "color": "red"
+                // });
+
+                //div1'in içinde herşeyi seçer
+                $("#div1").find("*").css({
+                    "border": "2px solid red",
+                    "color": "red"
+                });
+
+
+
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
