@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Eğitim Seti || Ders 77 || Canvas</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+        #c1 {
+            border: 2px solid black;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="c1" width="500px" height="500px"></canvas>
+
+    <script>
+        var canvas = document.getElementById("c1");
+        var a = canvas.getContext("2d");
+        a.beginPath();
+
+        a.moveTo(250, 20);
+        a.lineTo(150, 300);
+        //a.moveTo(250, 20);
+        a.lineTo(350, 300);
+        a.closePath();
+        //a.lineTo(150, 300);
+        a.lineWidth = "5";
+        a.strokeStyle = "black";
+        a.stroke();
+        a.fillStyle = "blue";
+        a.fill();
+    </script>
+
+</body>
+
+</html>
