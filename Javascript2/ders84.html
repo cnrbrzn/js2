@@ -46,81 +46,81 @@
             </tr>
             <tr>
                 <td>İrem</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Şişman</td>
+                <td>01111111111</td>
+                <td>iremsisman@gmail.com</td>
             </tr>
             <tr>
                 <td>Kılıç</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Kalender</td>
+                <td>02222222222</td>
+                <td>kilickalender@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Yağmur</td>
+                <td>Aydeniz</td>
+                <td>04444444444</td>
+                <td>yagmuraydeniz@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
+                <td>Barış</td>
                 <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>06666666666</td>
+                <td>barisakgul@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Batuhan</td>
+                <td>Küçükdere</td>
+                <td>07777777777</td>
+                <td>batuhankucukdere@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>İmren</td>
+                <td>Özcan</td>
+                <td>08888888888</td>
+                <td>imrenozcan@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Onur</td>
+                <td>Kanbur</td>
+                <td>09999999999</td>
+                <td>onurkanbur@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Melisa</td>
+                <td>Meral</td>
+                <td>01111111111</td>
+                <td>melisameral@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Yasin</td>
+                <td>Öztürk</td>
+                <td>02222222222</td>
+                <td>yasinozturk@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Yiğit</td>
+                <td>Filiz</td>
+                <td>03333333333</td>
+                <td>yigitfiliz@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Halil</td>
+                <td>Çal</td>
+                <td>04444444444</td>
+                <td>halilcal@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Berkay</td>
+                <td>Meraklı</td>
+                <td>05555555555</td>
+                <td>berkaymerakli@gmail.com</td>
             </tr>
             <tr>
-                <td>Doruk</td>
-                <td>Akgül</td>
-                <td>05554443322</td>
-                <td>dorukakgul@gmail.com</td>
+                <td>Ahmet</td>
+                <td>Bingöl</td>
+                <td>06666666666</td>
+                <td>ahmetbingol@gmail.com</td>
             </tr>
         </tbody>
     </table>
@@ -130,6 +130,16 @@
     <script>
         $(function() {
 
+            $("#ara").keyup(function() {
+
+                var deger = $(this).val().toLowerCase();
+                $("#liste tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(deger) > -1
+
+                    );
+                });
+
+            });
 
         });
     </script>
