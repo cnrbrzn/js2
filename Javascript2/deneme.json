@@ -1,0 +1,35 @@
+{
+    "isim": "Ali",
+    "soyisim": "Genç",
+    "kisiler": [
+        {
+            "isim": "Ali",
+            "soyisim": "Genç",
+            "yas":25,
+
+            "bildigiDiller": ["İngilizce","Almanca"],
+            "email":null,
+            "telefon": 55544433222,
+
+            "deneme": {
+                "isim": "Barış",
+                "soyisim": "Akgül"
+            }
+        },
+        {
+            "isim": "Barış",
+            "soyisim": "Akgül"
+        },
+        {
+            "isim": "Doruk",
+            "soyisim": "Kalender"
+        },
+        {
+            "isim": "Mehmet",
+            "soyisim": "Şimşek"
+        }
+    ]
+
+
+    
+}

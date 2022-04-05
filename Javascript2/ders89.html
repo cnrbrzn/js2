@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Eğitim Seti || Ders 89 || AJAX</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <div id="div1"></div>
+    <button id="btn">Tıkla</button>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+
+                //TXT'DEN VERİ ALMA 
+
+                //$("#div1").load("deneme.txt");
+                //$("#div1").load("deneme.txt h1");
+                // $("#div1").load("deneme.txt", function(responseTxt, statusTxt, xhr){
+                //     if(statusTxt == "success"){
+                //         alert("Başarılı");
+                //     }
+                //     else if(statusTxt == "error"){
+                //         alert("Hata : "+xhr.status+" Durum : "+xhr.statusText);
+                //     }
+                // });
+
+                // PHP'DEN VERİ ALMA
+
+                // $("#div1").load("deneme.php", function(responseTxt, statusTxt, xhr){
+                //     if(statusTxt == "success"){
+                //         alert("Başarılı");
+                //     }
+                //     else if(statusTxt == "error"){
+                //         alert("Hata : "+xhr.status+" Durum : "+xhr.statusText);
+                //     }
+                // });
+
+                // $.get("deneme.php",function(data, status){
+                //     $("#div1").html(data+ " Durum : "+status);
+                // });
+
+                // $.post("deneme.php",function(data, status){
+                //     $("#div1").html(data+ " Durum : "+status);
+                // });
+
+                $.post("deneme.php", {isim:"Ali", dil:"Almanca"} ,function(data){
+                    $("#div1").html(data);
+                });
+
+            });
+        })
+    </script>
+</body>
+</html>

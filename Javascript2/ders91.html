@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Eğitim Seti || Ders 91 || JSON</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div id="div1"></div>
+    <button id="btn">Tıkla</button>
+
+
+
+
+    <script>
+        $(function () {
+
+            $("#btn").click(function(){
+
+                $.getJSON("deneme2.json",function(data){
+                    var ad = data["kisiler"][0]["isim"];
+                    var soyad = data["kisiler"][0]["soyisim"];
+
+                    $("#div1").html(ad+ " "+soyad);
+                });
+
+                
+            });
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
